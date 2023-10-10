@@ -313,7 +313,7 @@ footer {
 
 .projects {
     display: inline-block;
-    margin: 72px 156px 72px 156px;
+    margin: 0 156px 72px 156px;
 }
 .projects li {
     display: inline-block;
