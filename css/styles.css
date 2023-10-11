@@ -6,7 +6,7 @@
 
 :root {
     --brand-color: rgba(77, 90, 229, 1);;
-    --text-main: rgba(46, 47, 66, 1);
+    --text-main: rgba(46, 47, 66, 1);    /* text-main */
     --text-address: rgba(67, 68, 85, 1);
     --color-change: rgba(64, 75, 191, 1);
     --bgcolor-all: rgba(255, 255, 255, 1);
@@ -16,19 +16,19 @@
 }
 
 body {
-    font-family: roboto, raleway, sans-serif;
+    font-family: "Roboto", sans-serif;
     color: var(--text-main);
     background-color: var(--bgcolor-all);
     width: 1440px;
 }
 
-a {
+/* a {
     text-decoration: none;
 }
 
 li {
     list-style-type: none;
-}
+} */
 
 header {
     height: 72px;
@@ -47,9 +47,10 @@ nav {
     width: 115px;
     margin: 25.5px 36px 25.5px 0;
     color: var(--IRIS, #4D5AE5);
-    font-family: Raleway;
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
     font-size: 18px;
-    line-height: 21px;
+    line-height: 1.17;
     letter-spacing: 0.54px;
     text-transform: uppercase;
 }
@@ -59,49 +60,61 @@ nav {
 .logo .logo-studio:hover {
     color: var(--color-change);
 }
+.link {
+    text-decoration: none;
+}
 
 ul {
     display: inline-block;
     margin: 0;
     padding: 0;
-   /*  margin-top: 24px; */
 }
-
+.list {
+    list-style-type: none;
+}
 .menu li {
     display: inline;
     margin-left: 40px;
+}
+.menu li .menu-page {
     font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.32px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+    color: var(--text-main);
 }
 
-.menu li a {
+/* .menu li a {
     color: var(--text-main);
     font-weight: 500;
-}
+} */
 
-.menu li a:hover,
-.menu li a:focus {
+.menu li .menu-page:hover,
+.menu li .menu-page:focus {
     color: var(--color-change);
 }
 
-address {
+.contact {
     display: inline-block;
     margin-right: 156px;
+    font-style: normal
 }
-address .contact-info li {
+.contact .contact-info li {
     display: inline;
     margin-left: 40px;
+}
+.contact .contact-info li .contact-info-mt {
     font-family: Roboto;
     font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.32px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--text-address)
 }
-address .contact-info li a {
+/* .contact .contact-info li a {
     color: var(--text-address);
-}
-address .contact-info li a:hover,
-address .contact-info li a:focus {
+} */
+.contact .contact-info li .contact-info-mt:hover,
+.contact .contact-info li .contact-info-mt:focus {
     color: var(--color-change);
 }
 
@@ -120,7 +133,7 @@ main {
     height: 120px;
     padding: 188px 472px 0 472px;
     font-size: 56px;
-    line-height: 60px;
+    line-height: 1.07;
     letter-spacing: 1.12px;
     text-align: center;
     color: var(--bgcolor-all);
@@ -135,9 +148,11 @@ main {
     border-radius: 4px;
     background-color: var(--brand-color);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
     font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.64px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
     text-align: center;
     color: var(--bgcolor-all);
 }
@@ -153,6 +168,7 @@ main {
 .presentation .presentation-title {
     display: none;
     text-align: center;
+
 }
 .presentation-cards {
     display: inline-block;
@@ -169,8 +185,9 @@ main {
 }
 .presentation li .presentation-subtitle {
     font-size: 20px;
-    line-height: 24px;
-    letter-spacing: 0.4px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
     color: var(--text-main);
 }
 .presentation li .presentation-text {
@@ -188,8 +205,8 @@ main {
 .working .working-title {
     text-align: center;
     font-size: 36px;
-    line-height: 40px;
-    letter-spacing: 0.72px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
     text-transform: capitalize;
 }
 
@@ -215,8 +232,8 @@ main {
     padding: 120px 0 72px 0;
     text-align: center;
     font-size: 36px;
-    line-height: 40px;
-    letter-spacing: 0.72px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
     text-transform: capitalize;
 }
 .team .team-cards {
@@ -227,18 +244,21 @@ main {
     display: inline-block;
     width: 264px;
     height: 380px;
-    background-color: var(--bgcolor-all);
     margin-right: 20px;
     &:last-child {
         margin-right: 0;
     }
 }
+.team .team-cards .team-cards-company {
+    background-color: var(--bgcolor-all);
+}
 .team .team-cards .team-name {
     text-align: center;
     margin: 32px 0 8px 0;
     font-size: 20px;
-    line-height: 24px;
-    letter-spacing: 0.4px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
 }
 .team .team-cards .team-text {
     text-align: center;
@@ -249,29 +269,30 @@ main {
     color: var(--text-address);
 }
 
-footer {
+.ftr {
     width: 100%;
     height: 312px;
     background-color: var(--bgcolor-dark);
 }
-.logo-ftr {
+.ftr-logo {
     display: inline-block;
     width: 115px;
     margin: 101.5px 1169px 17.5px 156px;
     color: var(--IRIS, #4D5AE5);
-    font-family: Raleway;
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
     font-size: 18px;
-    line-height: 21px;
-    letter-spacing: 0.54px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
     text-transform: uppercase;
 }
-.logo-ftr .logo-studio {
+.ftr-logo .ftr-logo-studio {
     color: var(--bgteam);
 }
-.logo-ftr .logo-studio:hover {
+.ftr-logo .ftr-logo-studio:hover {
     color: var(--color-change);
 }
-.text-ftr {
+.ftr-text {
     display: block;
     width: 264px;
     height: 72px;
@@ -280,6 +301,10 @@ footer {
     line-height: 24px; 
     letter-spacing: 0.32px;
     color: var(--bgteam);
+}
+
+.filter-title {
+    display: none;
 }
 
 .filter {
@@ -297,18 +322,19 @@ footer {
     padding: 12px 21px;
     border-radius: 4px;
     border: 1px solid var(--bgimg);
-    background: var(--bgteam);
+    background-color: var(--bgteam);
+    font-family: "Roboto", sans-serif;
     color: var(--brand-color);
     font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.64px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
     font-weight: 500;
+    cursor: pointer;
 }
 .filter li .filter-btn:hover,
-.filter li .filter-btn:active {
+.filter li .filter-btn:focus {
     background-color: var(--color-change);
     color: var(--bgcolor-all);
-    cursor: pointer;
 }
 
 .projects {
@@ -333,14 +359,15 @@ footer {
 .projects li .projects-cards-name {
     margin: 32px 16px 8px 16px;
     font-size: 20px;
-    line-height: 24px;  
-    letter-spacing: 0.4px;
+    font-weight: 500;
+    line-height: 1.2;  
+    letter-spacing: 0.02em;
     color: var(--text-main);
 }
 .projects li .projects-cards-platform {
     margin: 0 16px 32px 16px;
     font-size: 16px;
-    line-height: 24px; 
-    letter-spacing: 0.32px;
+    line-height: 1.5; 
+    letter-spacing: 0.02em;
     color: var(--text-address);
 }
