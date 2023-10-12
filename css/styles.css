@@ -5,14 +5,14 @@
     --text-address: rgba(67, 68, 85, 1);
     --color-change: rgba(64, 75, 191, 1);
     --bgcolor-all: rgba(255, 255, 255, 1);
-    --bgcolor-dark: rgba(46, 47, 66, 1);
     --bgimg: rgba(231, 233, 252, 1);
     --bgteam: rgba(244, 244, 253, 1);
 }
 
 body {
     font-family: "Roboto", sans-serif;
-    color: #434455, var(--text-address);
+    color: #434455;
+    color: var(--text-address);
     background-color: var(--bgcolor-all);
 }
 
@@ -71,7 +71,7 @@ body {
 }
 
 .black {
-    background-color: var(--bgcolor-dark);
+    background-color: var(--text-main);
 }
 .black-title {
     font-size: 56px;
@@ -157,7 +157,7 @@ body {
 }
 
 .ftr {
-    background-color: var(--bgcolor-dark);
+    background-color: var(--text-main);
 }
 .ftr-logo {
     color: var(--IRIS, #4D5AE5);
